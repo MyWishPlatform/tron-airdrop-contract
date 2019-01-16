@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.4.23;
 
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
@@ -8,9 +8,10 @@ import "sc-library/contracts/ERC223/ERC223Receiver.sol";
 contract AirDrop is Ownable {
     ERC20 public token;
     uint public createdAt;
-    constructor(address _target, ERC20 _token) public {
-        owner = _target;
-        token = _token;
+
+    constructor() public {
+        owner = D_TARGET;
+        token = ERC20(D_TOKEN);
         createdAt = block.number;
     }
 

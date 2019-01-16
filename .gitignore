@@ -2,3 +2,4 @@ node_modules
 preload.*
 .idea
 build
+contracts/AirDrop.sol
