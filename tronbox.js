@@ -21,5 +21,16 @@ module.exports = {
             fullHost: 'https://api.shasta.trongrid.io',
             network_id: '*', // eslint-disable-line camelcase
         },
+        compilers: {
+            solc: {
+                version: '0.4.25' // for compiler version
+            }
+        }
     },
+    solc: {
+        optimizer: {
+            enabled: true, // enable solc optimize, default: false
+            runs: 200
+        }
+    }
 };
